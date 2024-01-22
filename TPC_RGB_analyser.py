@@ -113,53 +113,53 @@ R2_df = pd.DataFrame(data)
 # Printing the DataFrame
 print(R2_df)
 
-# Ask the user to enter the number of samples to be analyzed
-n_unknown_samples = int(input("Please enter the number of samples to analyze:"))
+# Ask the user to enter the number of samples to be analysed
+n_unknown_samples = int(input("Please enter the number of samples to analyse:"))
 
 # Choose which channels to calculate the concentration
 channels = input("Please select a channel to calculate concentration (R, G, B, RGB, RG, RB, GB)")
 
-# Getting analyzed sample names
+# Getting analysed sample names
 unknown_sample_names = []
 for i in range(1, n_unknown_samples + 1):
-    sample_name = input(f"Please enter the name of the sample {i} to be analyzed")
+    sample_name = input(f"Please enter the name of the sample {i} to be analysed")
     unknown_sample_names.append(sample_name)
 
-# Obtaining the values of the analyzed samples and calculating the concentration
+# Obtaining the values of the analysed samples and calculating the concentration
 unknown_concentrations = []
 
 for i in range(n_unknown_samples):
     if channels == "R":
-        r = int(input(f"Please enter the R value of the sample to be analyzed {unknown_sample_names[i]}:"))
+        r = int(input(f"Please enter the R value of the sample to be analysed {unknown_sample_names[i]}:"))
         A = -np.log(r / I0)
         concentration = (A - intercept_R) / slope_R
     elif channels == "G":
-        g = int(input(f"Please enter the G value of the sample to be analyzed {unknown_sample_names[i]}:  "))
+        g = int(input(f"Please enter the G value of the sample to be analysed {unknown_sample_names[i]}:  "))
         A = -np.log(g / I0)
         concentration = (A - intercept_G) / slope_G
     elif channels == "B":
-        b = int(input(f"Please enter the B value of the sample to be analyzed {unknown_sample_names[i]}: "))
+        b = int(input(f"Please enter the B value of the sample to be analysed {unknown_sample_names[i]}: "))
         A = -np.log(b / I0)
         concentration = (A - intercept_B) / slope_B
     elif channels == "RGB":
-        r = int(input(f"Please enter the R value of the sample {unknown_sample_names[i]} to be analyzed"))
-        g = int(input(f"Please enter the G value of the sample {unknown_sample_names[i]} to be analyzed"))
-        b = int(input(f"Please enter the B value of the sample {unknown_sample_names[i]} to be analyzed "))
+        r = int(input(f"Please enter the R value of the sample {unknown_sample_names[i]} to be analysed"))
+        g = int(input(f"Please enter the G value of the sample {unknown_sample_names[i]} to be analysed"))
+        b = int(input(f"Please enter the B value of the sample {unknown_sample_names[i]} to be analysed "))
         A = -np.log(np.mean([r, g, b]) / I0)
         concentration = (A - intercept_RGB) / slope_RGB
     elif channels == "RG":
-        r = int(input(f"Please enter the R value of the sample {unknown_sample_names[i]} to be analyzed "))
-        g = int(input(f"Please enter the G value of the sample {unknown_sample_names[i]} to be analyzed"))
+        r = int(input(f"Please enter the R value of the sample {unknown_sample_names[i]} to be analysed "))
+        g = int(input(f"Please enter the G value of the sample {unknown_sample_names[i]} to be analysed"))
         A = -np.log(np.mean([r, g]) / I0)
         concentration = (A - intercept_RG) / slope_RG
     elif channels == "RB":
-        r = int(input(f"Please enter the R value of the sample {unknown_sample_names[i]} to be analyzed"))
-        b = int(input(f"Please enter the B value of the sample {unknown_sample_names[i]} to be analyzed"))
+        r = int(input(f"Please enter the R value of the sample {unknown_sample_names[i]} to be analysed"))
+        b = int(input(f"Please enter the B value of the sample {unknown_sample_names[i]} to be analysed"))
         A = -np.log(np.mean([r, b]) / I0)
         concentration = (A - intercept_RB) / slope_RB
     elif channels == "GB":
-        g = int(input(f"Please enter the G value of the sample {unknown_sample_names[i]} to be analyzed"))
-        b = int(input(f"Please enter the B value of the sample {unknown_sample_names[i]} to be analyzed"))
+        g = int(input(f"Please enter the G value of the sample {unknown_sample_names[i]} to be analysed"))
+        b = int(input(f"Please enter the B value of the sample {unknown_sample_names[i]} to be analysed"))
         A = -np.log(np.mean([g, b]) / I0)
         concentration = (A - intercept_GB) / slope_GB
         
@@ -171,7 +171,7 @@ results_df = pd.DataFrame({"Sample": unknown_sample_names, f"Concentration ({uni
 # Set the index of the DataFrame to start at 1
 results_df.index = results_df.index + 1
 
-print(f"\nConcentrations of samples to be analyzed ({unit}):")
+print(f"\nConcentrations of samples to be analysed ({unit}):")
 print(results_df)
 
 # Prompt the user for a document name
@@ -185,6 +185,7 @@ with pd.ExcelWriter(excel_file, engine='openpyxl') as writer:
     results_df.to_excel(writer, sheet_name='Results', index_label='No.')
 
 print(f"Results are saved in Microsoft Excel file '{excel_file}'.")
+
 
 
 
