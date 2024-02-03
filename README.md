@@ -1,4 +1,4 @@
-Project name: Analysis of smartphone images for the determination of total phenols
+Project name: Analysis of smartphone images for the determination of total phenols in Vegetable oils
 
 Analysis of smartphone images for the determination of total phenols in RGB colour system.
 
