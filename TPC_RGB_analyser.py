@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 from scipy.stats import linregress
 
 # Title and name of the algorithm version
-print("Analysis of smartphone images in the RGB color system")
+print("Smartphone image analysis in the RGB colour system")
 print("Algorithm version: v.1.0")
 print()
 
