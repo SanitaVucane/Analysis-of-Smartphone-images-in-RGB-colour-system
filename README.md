@@ -4,7 +4,7 @@
 
 This project provides a Python-based tool for analyzing the total phenol content in vegetable oils using RGB values from smartphone images. The RGB color system is utilized to calculate absorption values, which are then correlated with phenol concentrations through a series of calibration curves.
 
-## Features
+### Features
 
 - **RGB Absorption Calculation**: Automatically calculates the absorption values for R, G, and B channels using intensity data.
 - **Calibration Curves**: Generates calibration curves for different combinations of RGB channels (R, G, B, RGB, RG, RB, GB) using linear regression.
@@ -13,7 +13,7 @@ This project provides a Python-based tool for analyzing the total phenol content
 - **Visualization**: Graphical calibration curves are created for easy visualization of the relationship between absorption and concentration.
 - **Data Export**: Results are saved in an Excel file, allowing users to easily store and share the analyzed data.
 
-## Workflow
+### Workflow
 
 1. **Input**: Users enter the RGB values for a set of known calibration solutions.
 2. **Absorption Calculation**: Absorption is computed for each RGB channel.
@@ -21,14 +21,14 @@ This project provides a Python-based tool for analyzing the total phenol content
 4. **Analysis of Unknown Samples**: Users input the RGB values for unknown samples, and the tool calculates the phenol concentration based on the selected color channel(s).
 5. **Output**: Results are saved in an Excel file.
 
-## Example Usage
+### Example Usage
 
 1. Input the concentration unit and RGB values for calibration solutions.
 2. Select a color channel (R, G, B, or combinations) for the calibration and analysis of unknown samples.
 3. Input the RGB values of unknown samples to get the estimated concentrations.
 4. Save the results in an Excel file.
 
-## Dependencies
+### Dependencies
 
 - Python 3.x
 - NumPy
@@ -42,7 +42,7 @@ pip install numpy pandas matplotlib scipy openpyxl
 ```
 Once the dependencies are installed, you can proceed to run the script and input your data for analysis.
 
-## License
+### License
 
 This project is licensed under the **GNU General Public License v3.0**. You are free to use, modify, and distribute the code for academic and non-commercial purposes. However, any commercial usage may require a separate license.
 
