@@ -46,14 +46,5 @@ Once the dependencies are installed, you can proceed to run the script and input
 
 This project is licensed under the **GNU General Public License v3.0**. You are free to use, modify, and distribute the code for academic and non-commercial purposes. However, any commercial usage may require a separate license.
 
-## Limitations
-
-- The accuracy of the analysis depends on the quality of smartphone images and the consistency of lighting conditions during image capture.
-- The algorithm is designed for research purposes and may not be suitable for commercial use without further validation.
-- Different smartphones may yield slightly different results due to variations in camera quality and RGB sensor calibration.
-
-## Contributions
-
-Contributions, bug reports, and improvements are welcome! If you'd like to contribute, please fork the repository, create a new branch, and submit a pull request with your proposed changes.
 
 
