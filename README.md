@@ -40,6 +40,8 @@ This project provides a Python-based tool for analyzing the total phenol content
 ```bash
 pip install numpy pandas matplotlib scipy openpyxl
 ```
+Once the dependencies are installed, you can proceed to run the script and input your data for analysis.
+
 ## License
 
 This project is licensed under the **GNU General Public License v3.0**. You are free to use, modify, and distribute the code for academic and non-commercial purposes. However, any commercial usage may require a separate license.
